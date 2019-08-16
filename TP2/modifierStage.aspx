@@ -13,28 +13,28 @@
     </h1>
     <form id="form1" runat="server">
         
-        <asp:Label ID="Label1" runat="server" Text="Titre : "></asp:Label>
+        <asp:Label ID="lblTitre" runat="server" Text="Titre : "></asp:Label>
         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-        <asp:TextBox ID="TextBox1" runat="server"></asp:TextBox>
+        <asp:TextBox ID="txtTitre" runat="server"></asp:TextBox>
         <br />
-        <asp:Label ID="Label2" runat="server" Text="Date de début : "></asp:Label>
+        <asp:Label ID="lblDebut" runat="server" Text="Date de début : "></asp:Label>
         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-        <asp:TextBox ID="TextBox2" runat="server"></asp:TextBox>
+        <asp:TextBox ID="txtDebut" runat="server"></asp:TextBox>
         <br />
-        <asp:Label ID="Label3" runat="server" Text="Date de fin : "></asp:Label>
+        <asp:Label ID="lblFin" runat="server" Text="Date de fin : "></asp:Label>
         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-        <asp:TextBox ID="TextBox3" runat="server"></asp:TextBox>
+        <asp:TextBox ID="txtFin" runat="server" OnTextChanged="TextBox3_TextChanged"></asp:TextBox>
         <br />
-        <asp:Label ID="Label4" runat="server" Text="Commentaire : "></asp:Label>
+        <asp:Label ID="lblCommentaire" runat="server" Text="Commentaire : "></asp:Label>
         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-        <asp:TextBox ID="TextBox5" runat="server"></asp:TextBox>
+        <asp:TextBox ID="txtCommentaire" runat="server"></asp:TextBox>
         <br />
-        <asp:Label ID="Label5" runat="server" Text="Nom de superviseur : "></asp:Label>
+        <asp:Label ID="lblNom" runat="server" Text="Nom de superviseur : "></asp:Label>
         
     &nbsp;&nbsp;&nbsp;
-        <asp:TextBox ID="TextBox4" runat="server"></asp:TextBox>
+        <asp:TextBox ID="txtNom" runat="server"></asp:TextBox>
         <br />
-        <asp:Button ID="Button1" runat="server" Text="Confirmer" />
+        <asp:Button ID="btnConfirmer" runat="server" Text="Confirmer" />
         
     </form>
 </body>

@@ -186,10 +186,14 @@ namespace TP2
         /// Retourne l'administrateur du site.
         /// </summary>
         /// <returns>L'admin</returns>
-        public Administrateur GetAdministrateur()
+        public Administrateur GetAdministrateur(int p_Id)
         {
             return m_BaseDeDonnées.Administrateurs.SingleOrDefault(
+<<<<<<< Updated upstream
                 Administrateur => (Administrateur.Id == 1));
+=======
+               Administrateur => (Administrateur.Id == p_Id));
+>>>>>>> Stashed changes
         }
         #endregion
 
