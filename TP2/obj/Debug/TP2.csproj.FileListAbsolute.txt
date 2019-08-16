@@ -1,0 +1,2 @@
+C:\Users\simon\Nextcloud\School\Prog\progTP2\TP2\obj\Debug\TP2.csprojAssemblyReference.cache
+C:\Users\simon\Nextcloud\School\Prog\progTP2\TP2\obj\Debug\TP2.csproj.CoreCompileInputs.cache
