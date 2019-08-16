@@ -155,10 +155,7 @@ namespace TP2
             Debug.Assert( GetSuperviseur(p_SuperviseurId) != null, "Le superviseur doit exister" );
             Debug.Assert( GetStagiaire(p_StagiaireId) != null, "Le stagiaire doit exister" );
 
-            this.m_BaseDeDonnées.Stages.InsertOnSubmit
-
-
-
+            this.m_BaseDeDonnées.Stages.InsertOnSubmit(p_Stage);
         }
 
         /// <summary>
@@ -169,7 +166,8 @@ namespace TP2
         /// <returns>Un Stage ou null</returns>
         public Stage GetStage(int p_Id)
         {
-            
+            return m_BaseDeDonnées.Stages.SingleOrDefault(
+                Stage => (Stage.Id == p_Id));
         }
 
         /// <summary>
@@ -177,7 +175,7 @@ namespace TP2
         /// </summary>
         public IQueryable<Stage> GetAllStages()
         {
-            
+            return m_BaseDeDonnées.Stages;
         }
 
         #endregion
@@ -190,12 +188,12 @@ namespace TP2
         /// <returns>L'admin</returns>
         public Administrateur GetAdministrateur()
         {
-            
+            return m_BaseDeDonnées.Administrateurs.SingleOrDefault(
+                Administrateur => (Administrateur.Id == 1));
         }
-
         #endregion
 
 
-        
+
     }
 }

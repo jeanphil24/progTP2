@@ -126,6 +126,7 @@
       <DependentUpon>modifierSuperviseur.aspx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="sessionUtilisateur.cs" />
     <Compile Include="stage.aspx.cs">
       <DependentUpon>stage.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>

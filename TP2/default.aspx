@@ -11,16 +11,26 @@
     <h1>
         Connectez-vous !
     </h1>
-    <form id="form1" runat="server">
+    <form id="form1" runat="server" method="post">
         <div>
+            <asp:RadioButtonList ID="radio_typeUsager" runat="Server">
+                            <asp:ListItem Text="Stagiaire" Value="Stagiaire"></asp:ListItem>
+                            <asp:ListItem Text="Superviseur" Value="Superviseur"></asp:ListItem>
+                            <asp:ListItem Text="Administrateur" Value="Administrateur"></asp:ListItem>
+                        </asp:RadioButtonList>
+            <br />
             Nom d&#39;usager :&nbsp;
-            <asp:TextBox ID="TextBox1" runat="server"></asp:TextBox>
+            <asp:TextBox ID="txt_usager" runat="server"></asp:TextBox>
+            <span style="COLOR: red"><asp:Literal ID="lit_usager" runat="server"></asp:Literal></span>
+            <br />
             <br />
             Mot de passe :&nbsp;
-            <asp:TextBox ID="TextBox2" runat="server"></asp:TextBox>
+            <asp:TextBox ID="txt_motDePasse" runat="server"></asp:TextBox>
+            <span style="COLOR: red"><asp:Literal ID="lit_motDePasse" runat="server" ></asp:Literal></span>
             <br />
-            <asp:Button ID="Button1" runat="server" OnClick="Button1_Click" Text="Connexion" />
-
+            <br />
+            <asp:Button ID="btn_submit" runat="server" Text="Connexion" />
+            
         </div>
     </form>
 </body>
