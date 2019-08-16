@@ -125,17 +125,7 @@
       <DependentUpon>modifierSuperviseur.aspx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
-<<<<<<< Updated upstream
     <Compile Include="sessionUtilisateur.cs" />
-    <Compile Include="stage.aspx.cs">
-      <DependentUpon>stage.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="stage.aspx.designer.cs">
-      <DependentUpon>stage.aspx</DependentUpon>
-    </Compile>
-=======
->>>>>>> Stashed changes
     <Compile Include="stagiaire.aspx.cs">
       <DependentUpon>stagiaire.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
