@@ -19,6 +19,9 @@
         #form4 {
             width: 240px;
         }
+        .auto-style1 {
+            width: 421px;
+        }
     </style>
 </head>
 <body>
@@ -29,7 +32,7 @@
     <h2>
         Informations :
     </h2>
-    <form id="form1" runat="server">
+    <form id="form1" runat="server" class="auto-style1">
         
         <asp:Label ID="Label1" runat="server" Text="Nom : "></asp:Label> <asp:Literal ID="Literal1" runat="server"></asp:Literal>
         <br />
@@ -90,5 +93,21 @@
         <br />
         <asp:Button ID="Button4" runat="server" Text="Modifier" />
     </form>
+    <p>
+        &nbsp;</p>
+    <asp:GridView ID="GridView1" runat="server" DataSourceID="SqlDataSource1">
+    </asp:GridView>
+    <asp:LinqDataSource ID="LinqDataSource1" runat="server" EntityTypeName="">
+    </asp:LinqDataSource>
+    <asp:SqlDataSource ID="SqlDataSource1" runat="server"></asp:SqlDataSource>
+    <p>
+        &nbsp;</p>
+    <p>
+        &nbsp;</p>
+    <p>
+        &nbsp;</p>
+    <p>
+        &nbsp;</p>
+
 </body>
 </html>

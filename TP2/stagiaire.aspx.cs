@@ -11,7 +11,25 @@ namespace TP2
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            BDGestionStages bd = new BDGestionStages();
+            if (this.Session["USER"] != null)
+            {
+                if (Convert.ToString(this.Session["USERLEVEL"]) == "admin")
+                {
+                    Administrateur user = bd.GetAdministrateur();
+                    string userLevel = Convert.ToString(this.Session["USERLEVEL"]);
+                }
+                else if (Convert.ToString(this.Session["USERLEVEL"]) == "superviseur")
+                {
+                    Superviseur user = bd.GetSuperviseur(Convert.ToString(this.Session["USER"]));
+                    string userLevel = Convert.ToString(this.Session["USERLEVEL"]);
+                }
+                else if (Convert.ToString(this.Session["USERLEVEL"]) == "stagiaire")
+                {
+                    Stagiaire user = bd.GetStagiaire(Convert.ToString(this.Session["USER"]));
+                    string userLevel = Convert.ToString(this.Session["USERLEVEL"]);
+                }
+            }
         }
 
         protected void Button1_Click(object sender, EventArgs e)
