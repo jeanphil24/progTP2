@@ -15,7 +15,7 @@
     <form id="form1" runat="server" method="post">
         <div>
             <asp:RadioButtonList ID="radio_typeUsager" runat="Server">
-                            <asp:ListItem Text="Stagiaire" Value="Stagiaire"></asp:ListItem>
+                            <asp:ListItem Text="Stagiaire" Value="Stagiaire" Selected="True"></asp:ListItem>
                             <asp:ListItem Text="Superviseur" Value="Superviseur"></asp:ListItem>
                             <asp:ListItem Text="Administrateur" Value="Administrateur"></asp:ListItem>
                         </asp:RadioButtonList>
@@ -26,7 +26,7 @@
             <br />
             <br />
             <asp:Label CssClass="accueil_label" ID="lbl_motDePasse" runat="server" Text="Label">Mot de passe :</asp:Label>
-            <asp:TextBox ID="txt_motDePasse" runat="server"></asp:TextBox>
+            <asp:TextBox ID="txt_motDePasse" runat="server" TextMode="Password"></asp:TextBox>
             <span style="COLOR: red"><asp:Literal ID="lit_motDePasse" runat="server" ></asp:Literal></span>
             <br />
             <br />
