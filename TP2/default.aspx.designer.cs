@@ -31,6 +31,15 @@ namespace TP2 {
         protected global::System.Web.UI.WebControls.RadioButtonList radio_typeUsager;
         
         /// <summary>
+        /// Contrôle lbl_usager.
+        /// </summary>
+        /// <remarks>
+        /// Champ généré automatiquement.
+        /// Pour modifier, déplacez la déclaration de champ du fichier de concepteur dans le fichier code-behind.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lbl_usager;
+        
+        /// <summary>
         /// Contrôle txt_usager.
         /// </summary>
         /// <remarks>
@@ -47,6 +56,15 @@ namespace TP2 {
         /// Pour modifier, déplacez la déclaration de champ du fichier de concepteur dans le fichier code-behind.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Literal lit_usager;
+        
+        /// <summary>
+        /// Contrôle lbl_motDePasse.
+        /// </summary>
+        /// <remarks>
+        /// Champ généré automatiquement.
+        /// Pour modifier, déplacez la déclaration de champ du fichier de concepteur dans le fichier code-behind.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lbl_motDePasse;
         
         /// <summary>
         /// Contrôle txt_motDePasse.

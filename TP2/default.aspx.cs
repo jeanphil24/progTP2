@@ -15,38 +15,96 @@ namespace TP2
 
                 BDGestionStages bd = new BDGestionStages();
 
-                bool nom = false;
-                bool motDePasse = false;
+                bool verificationNom = false;
+                bool verificationMotDePasse = false;
+                string redirection = "";
+                int niveauPrivilege = 0;
 
-                if (this.radio_typeUsager.Text == "Stagiaire") {
-                    // to-do
-                }
-                if (this.radio_typeUsager.Text == "Superviseur") {
-                    // to-do
-                }
-                if ( this.radio_typeUsager.Text == "Administrateur" ) {
+                if ( (this.radio_typeUsager.Text == "Stagiaire") && (this.txt_usager.Text != "") ) {
 
-                    Administrateur admin = bd.GetAdministrateur();
+                    Stagiaire courant = bd.GetStagiaire( this.txt_usager.Text );
 
-                    if (admin.NomUtilisateur == this.txt_usager.Text) {
-                        nom = true;
+                    if ( courant != null ) {
+
+                        redirection = "stagiaire";
+                        niveauPrivilege = 3;
+
+                        if ( courant.NomUtilisateur == this.txt_usager.Text ) {
+                            verificationNom = true;
+                        }
+                        if ( courant.MotDePasse == this.txt_motDePasse.Text ) {
+                            verificationMotDePasse = true;
+                        }
                     }
-                    if (admin.MotDePasse == this.txt_motDePasse.Text){
-                        motDePasse = true;
-                    }
-                    if ( nom && motDePasse ) {
+                        
+                }
+                if ( (this.radio_typeUsager.Text == "Superviseur") && (this.txt_usager.Text != "") ) {
 
-                        this.Session["USER"] = new sessionUtilisateur( this.txt_usager.Text, 1 );
-                        this.Response.Redirect("~/administrateur.aspx");
+                    Superviseur courant = bd.GetSuperviseur(this.txt_usager.Text);
+
+                    if ( courant != null ) {
+
+                        redirection = "superviseur";
+                        niveauPrivilege = 2;
+
+                        if ( courant.NomUtilisateur == this.txt_usager.Text ) {
+                            verificationNom = true;
+                        }
+                        if ( courant.MotDePasse == this.txt_motDePasse.Text ) {
+                            verificationMotDePasse = true;
+                        }
+                    }
+                }
+                if ( (this.radio_typeUsager.Text == "Administrateur") && (this.txt_usager.Text != "")) {
+
+                    Administrateur courant = bd.GetAdministrateur();
+
+                    if ( courant != null ) {
+
+                        redirection = "administrateur";
+                        niveauPrivilege = 1;
+
+                        if ( courant.NomUtilisateur == this.txt_usager.Text ) {
+                            verificationNom = true;
+                        }
+                        if ( courant.MotDePasse == this.txt_motDePasse.Text ) {
+                            verificationMotDePasse = true;
+                        }
                     }
                 }
 
-                if (!nom) {
-                    this.lit_usager.Text = "Nom d'usager non valide";
+                // redirection si les 2 champs sont valides
+                if ( verificationNom && verificationMotDePasse ){
+                    this.Session["USER"] = new sessionUtilisateur(this.txt_usager.Text, niveauPrivilege);
+                    this.Response.Redirect("~/" + redirection + ".aspx");
                 }
-                if (!motDePasse) {
-                    this.lit_motDePasse.Text = "Mot de passe non valide";
+
+                // messages d'erreurs
+                if ( this.txt_usager.Text == "" ) { // user est vide
+                    this.lit_usager.Text = "Le champ ne peut pas être vide";
+                    this.lit_motDePasse.Text = "";
                 }
+                else {
+                    if ( !verificationNom ) { // user n'est pas ok
+
+                        this.lit_usager.Text = "Nom d'usager non valide";
+                        this.lit_motDePasse.Text = "";
+                    }
+                    else {
+                        this.lit_usager.Text = "";
+
+                        if ( this.txt_motDePasse.Text == "" ) { // mot de passe vide
+
+                            this.lit_motDePasse.Text = "Le champ ne peut pas être vide";
+                        }
+                        else if ( !verificationMotDePasse ) { // mot de passe pas ok
+
+                            this.lit_motDePasse.Text = "Mot de passe non valide";
+                        }
+                    }
+                    
+                }
+                
             }
         }
         

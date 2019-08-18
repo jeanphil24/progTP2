@@ -5,7 +5,8 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
-    <title></title>
+    <style>@import url(format.css);</style>
+    <title>TP2 - Page de connexion</title>
 </head>
 <body>
     <h1>
@@ -19,12 +20,12 @@
                             <asp:ListItem Text="Administrateur" Value="Administrateur"></asp:ListItem>
                         </asp:RadioButtonList>
             <br />
-            Nom d&#39;usager :&nbsp;
+            <asp:Label CssClass="accueil_label" ID="lbl_usager" runat="server" Text="Label">Nom d'usager :</asp:Label>
             <asp:TextBox ID="txt_usager" runat="server"></asp:TextBox>
             <span style="COLOR: red"><asp:Literal ID="lit_usager" runat="server"></asp:Literal></span>
             <br />
             <br />
-            Mot de passe :&nbsp;
+            <asp:Label CssClass="accueil_label" ID="lbl_motDePasse" runat="server" Text="Label">Mot de passe :</asp:Label>
             <asp:TextBox ID="txt_motDePasse" runat="server"></asp:TextBox>
             <span style="COLOR: red"><asp:Literal ID="lit_motDePasse" runat="server" ></asp:Literal></span>
             <br />
