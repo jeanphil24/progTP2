@@ -5,103 +5,57 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
-    <title></title>
-    <style type="text/css">
-        #form1 {
-            width: 247px;
-        }
-        #form2 {
-            width: 245px;
-        }
-        #form3 {
-            width: 243px;
-        }
-        #form4 {
-            width: 240px;
-        }
-        .auto-style1 {
-            width: 421px;
-        }
-    </style>
+    <style>@import url(format.css);</style>
+    <title>Page du stagiaire</title>
 </head>
 <body>
     <h1>
         Page du stagiaire
-        <asp:Literal ID="Literal20" runat="server"></asp:Literal>
+        :
+        <asp:Literal ID="litNom1" runat="server"></asp:Literal>
     </h1>
     <h2>
         Informations :
     </h2>
     <form id="form1" runat="server" class="auto-style1">
         
-        <asp:Label ID="Label1" runat="server" Text="Nom : "></asp:Label> <asp:Literal ID="Literal1" runat="server"></asp:Literal>
+        <asp:Label ID="lbl_matricule" runat="server" Text="Matricule : " CssClass="labels-Stagiaire"></asp:Label> <asp:Literal ID="litMatricule" runat="server"></asp:Literal>
         <br />
-        <asp:Label ID="Label2" runat="server" Text="Telephone : "></asp:Label> <asp:Literal ID="Literal2" runat="server"></asp:Literal>
         <br />
-        <asp:Label ID="Label3" runat="server" Text="Matricule : "></asp:Label> <asp:Literal ID="Literal3" runat="server"></asp:Literal>
+        
+        <asp:Label ID="lbl_nom" runat="server" Text="Nom : " CssClass="labels-Stagiaire"></asp:Label> <asp:Literal ID="litNom2" runat="server"></asp:Literal>
         <br />
-        <asp:Label ID="Label4" runat="server" Text="Courriel : "></asp:Label> <asp:Literal ID="Literal4" runat="server"></asp:Literal>
         <br />
-        <asp:Button ID="Button1" runat="server" Text="Modifier" OnClick="Button1_Click" />
-    </form>
+        <asp:Label ID="lbl_telephone" runat="server" Text="Telephone : " CssClass="labels-Stagiaire"></asp:Label> <asp:Literal ID="litTelephone" runat="server"></asp:Literal>
+        <br />
+        <br />
+        <asp:Label ID="lbl_courriel" runat="server" Text="Courriel : " CssClass="labels-Stagiaire"></asp:Label> <asp:Literal ID="litCourriel" runat="server"></asp:Literal>
+        <br />
+        <br />
+        <asp:Button ID="Button1" runat="server" Text="Modifier" />
     
     <h2>
         Stages :
     </h2>
-    <h2>
-        <asp:Button ID="Button7" runat="server" Text="Ajouter" OnClick="Button7_Click" />
-    </h2>
-    <form id="form2" runat="server">
-        
-        <asp:Label ID="Label5" runat="server" Text="Titre : "></asp:Label> <asp:Literal ID="Literal5" runat="server"></asp:Literal>
-        <br />
-        <asp:Label ID="Label6" runat="server" Text="Date de début : "></asp:Label> <asp:Literal ID="Literal6" runat="server"></asp:Literal>
-        <br />
-        <asp:Label ID="Label7" runat="server" Text="Date de fin : "></asp:Label> <asp:Literal ID="Literal7" runat="server"></asp:Literal>
-        <br />
-        <asp:Label ID="Label8" runat="server" Text="Commentaires : "></asp:Label> <asp:Literal ID="Literal8" runat="server"></asp:Literal>
-        <br />
-        <asp:Label ID="Label9" runat="server" Text="Superviseur : "></asp:Label> <asp:Literal ID="Literal9" runat="server"></asp:Literal>
-        <br />
-        <asp:Button ID="Button2" runat="server" Text="Modifier" />
-    </form>
-    <form id="form3" runat="server">
-        
-        <asp:Label ID="Label10" runat="server" Text="Titre : "></asp:Label> <asp:Literal ID="Literal10" runat="server"></asp:Literal>
-        <br />
-        <asp:Label ID="Label11" runat="server" Text="Date de début : "></asp:Label> <asp:Literal ID="Literal11" runat="server"></asp:Literal>
-        <br />
-        <asp:Label ID="Label12" runat="server" Text="Date de fin : "></asp:Label> <asp:Literal ID="Literal12" runat="server"></asp:Literal>
-        <br />
-        <asp:Label ID="Label13" runat="server" Text="Commentaires : "></asp:Label> <asp:Literal ID="Literal13" runat="server"></asp:Literal>
-        <br />
-        <asp:Label ID="Label14" runat="server" Text="Superviseur : "></asp:Label> <asp:Literal ID="Literal14" runat="server"></asp:Literal>
-        <br />
-        <asp:Button ID="Button3" runat="server" Text="Modifier" />
-    </form>
-    <form id="form4" runat="server">
-        
-        <asp:Label ID="Label15" runat="server" Text="Titre : "></asp:Label> <asp:Literal ID="Literal15" runat="server"></asp:Literal>
-        <br />
-        <asp:Label ID="Label16" runat="server" Text="Date de début : "></asp:Label> <asp:Literal ID="Literal16" runat="server"></asp:Literal>
-        <br />
-        <asp:Label ID="Label17" runat="server" Text="Date de fin : "></asp:Label> <asp:Literal ID="Literal17" runat="server"></asp:Literal>
-        <br />
-        <asp:Label ID="Label18" runat="server" Text="Commentaires : "></asp:Label> <asp:Literal ID="Literal18" runat="server"></asp:Literal>
-        <br />
-        <asp:Label ID="Label19" runat="server" Text="Superviseur : "></asp:Label> <asp:Literal ID="Literal19" runat="server"></asp:Literal>
-        <br />
-        <asp:Button ID="Button4" runat="server" Text="Modifier" />
-    </form>
     <p>
         &nbsp;</p>
-    <asp:GridView ID="GridView1" runat="server" DataSourceID="SqlDataSource1">
+    <asp:GridView ID="GridView1" runat="server" DataSourceID="LinqDataSourceStages" AllowPaging="True" AllowSorting="True" AutoGenerateColumns="False" CssClass="auto-style2" DataKeyNames="Id" Width="1025px">
+        <Columns>
+            <asp:CommandField ShowDeleteButton="True" ShowEditButton="True" />
+            <asp:BoundField DataField="Id" HeaderText="Id" InsertVisible="False" ReadOnly="True" SortExpression="Id" />
+            <asp:BoundField DataField="Titre" HeaderText="Titre" SortExpression="Titre" />
+            <asp:BoundField DataField="Début" HeaderText="Début" SortExpression="Début" />
+            <asp:BoundField DataField="Fin" HeaderText="Fin" SortExpression="Fin" />
+            <asp:BoundField DataField="Commentaire" HeaderText="Commentaire" SortExpression="Commentaire" />
+            <asp:BoundField DataField="SupersiveurId" HeaderText="SupersiveurId" SortExpression="SupersiveurId" />
+            <asp:BoundField DataField="StagiaireId" HeaderText="StagiaireId" SortExpression="StagiaireId" />
+        </Columns>
     </asp:GridView>
-    <asp:LinqDataSource ID="LinqDataSource1" runat="server" EntityTypeName="">
-    </asp:LinqDataSource>
-    <asp:SqlDataSource ID="SqlDataSource1" runat="server"></asp:SqlDataSource>
-    <p>
-        &nbsp;</p>
+        <asp:LinqDataSource ID="LinqDataSourceStages" runat="server" ContextTypeName="TP2.GestionStagesDataContext" EnableDelete="True" EnableInsert="True" EnableUpdate="True" EntityTypeName="" OrderBy="Titre" TableName="Stages">
+        </asp:LinqDataSource>
+    
+    </form>
+    
     <p>
         &nbsp;</p>
     <p>

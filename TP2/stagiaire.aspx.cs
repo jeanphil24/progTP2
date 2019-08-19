@@ -12,23 +12,20 @@ namespace TP2
         protected void Page_Load(object sender, EventArgs e)
         {
             BDGestionStages bd = new BDGestionStages();
-            if (this.Session["USER"] != null)
-            {
-                if (Convert.ToString(this.Session["USERLEVEL"]) == "admin")
-                {
-                    Administrateur user = bd.GetAdministrateur();
-                    string userLevel = Convert.ToString(this.Session["USERLEVEL"]);
-                }
-                else if (Convert.ToString(this.Session["USERLEVEL"]) == "superviseur")
-                {
-                    Superviseur user = bd.GetSuperviseur(Convert.ToString(this.Session["USER"]));
-                    string userLevel = Convert.ToString(this.Session["USERLEVEL"]);
-                }
-                else if (Convert.ToString(this.Session["USERLEVEL"]) == "stagiaire")
-                {
-                    Stagiaire user = bd.GetStagiaire(Convert.ToString(this.Session["USER"]));
-                    string userLevel = Convert.ToString(this.Session["USERLEVEL"]);
-                }
+            sessionUtilisateur local = (sessionUtilisateur)this.Session["USER"];
+
+            if (local == null || local.m_niveau != 3) {
+
+                this.Response.Redirect("~/default.aspx");
+            }
+            else {
+
+                Stagiaire stagiaire = bd.GetStagiaire(local.m_nom);
+                litNom1.Text = local.m_nom;
+                litNom2.Text = local.m_nom;
+                litTelephone.Text = stagiaire.Téléphone;
+                litMatricule.Text = stagiaire.Id.ToString();
+                litCourriel.Text = stagiaire.Courriel;
             }
         }
 
