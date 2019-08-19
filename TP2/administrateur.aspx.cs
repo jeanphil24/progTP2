@@ -11,7 +11,19 @@ namespace TP2
     {
         protected void Page_Load(object sender, EventArgs e)
         {
+            sessionUtilisateur session = (sessionUtilisateur)this.Session["USER"];
 
+            if ( (session == null) || (session.m_niveau != 1) ) {
+                this.Response.Redirect("~/default.aspx");
+            }
+            else {
+                lit_titre.Text = "Bienvenue " + session.m_nom;
+            }
+        }
+
+        protected void btn_ajouterStagiaire_Click(object sender, EventArgs e) {
+
+            this.Response.Redirect("~/ajouterStagiaire.aspx");
         }
     }
 }
