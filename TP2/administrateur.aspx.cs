@@ -18,12 +18,28 @@ namespace TP2
             }
             else {
                 lit_titre.Text = "Bienvenue " + session.m_nom;
+                lit_titrePage.Text = "Page de l'administrateur : " + session.m_nom;
+
+                if (this.Session["MESSAGEAJOUT"] != null) {
+
+                    lit_messageAjout.Text = "<p>" +  (string)this.Session["MESSAGEAJOUT"] + "</p>";
+                    this.Session["MESSAGEAJOUT"] = null;
+                }
             }
         }
 
         protected void btn_ajouterStagiaire_Click(object sender, EventArgs e) {
 
-            this.Response.Redirect("~/ajouterStagiaire.aspx");
+            //parametre de session pour stagiaire
+            this.Session["AJOUTER"] = 1;
+            this.Response.Redirect("~/ajouterPersonnel.aspx");
+        }
+
+        protected void btn_ajoutSuperviseur_Click(object sender, EventArgs e)
+        {
+            //parametre de session pour superviseur
+            this.Session["AJOUTER"] = 2;
+            this.Response.Redirect("~/ajouterPersonnel.aspx");
         }
     }
 }

@@ -13,6 +13,24 @@ namespace TP2 {
     public partial class ajouterStagiaire {
         
         /// <summary>
+        /// Contrôle lit_titrePage.
+        /// </summary>
+        /// <remarks>
+        /// Champ généré automatiquement.
+        /// Pour modifier, déplacez la déclaration de champ du fichier de concepteur dans le fichier code-behind.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Literal lit_titrePage;
+        
+        /// <summary>
+        /// Contrôle lit_titre.
+        /// </summary>
+        /// <remarks>
+        /// Champ généré automatiquement.
+        /// Pour modifier, déplacez la déclaration de champ du fichier de concepteur dans le fichier code-behind.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Literal lit_titre;
+        
+        /// <summary>
         /// Contrôle form_ajouterStagiaire.
         /// </summary>
         /// <remarks>
@@ -83,6 +101,33 @@ namespace TP2 {
         /// Pour modifier, déplacez la déclaration de champ du fichier de concepteur dans le fichier code-behind.
         /// </remarks>
         protected global::System.Web.UI.WebControls.RequiredFieldValidator val_nomVide;
+        
+        /// <summary>
+        /// Contrôle lbl_nomUtilisateur.
+        /// </summary>
+        /// <remarks>
+        /// Champ généré automatiquement.
+        /// Pour modifier, déplacez la déclaration de champ du fichier de concepteur dans le fichier code-behind.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lbl_nomUtilisateur;
+        
+        /// <summary>
+        /// Contrôle txt_nomUtilisateur.
+        /// </summary>
+        /// <remarks>
+        /// Champ généré automatiquement.
+        /// Pour modifier, déplacez la déclaration de champ du fichier de concepteur dans le fichier code-behind.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox txt_nomUtilisateur;
+        
+        /// <summary>
+        /// Contrôle val_utilisateurVide.
+        /// </summary>
+        /// <remarks>
+        /// Champ généré automatiquement.
+        /// Pour modifier, déplacez la déclaration de champ du fichier de concepteur dans le fichier code-behind.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator val_utilisateurVide;
         
         /// <summary>
         /// Contrôle lbl_telephone.
@@ -175,13 +220,13 @@ namespace TP2 {
         protected global::System.Web.UI.WebControls.TextBox txt_motDePasse;
         
         /// <summary>
-        /// Contrôle val_motDePasse.
+        /// Contrôle val_motDePasseVide.
         /// </summary>
         /// <remarks>
         /// Champ généré automatiquement.
         /// Pour modifier, déplacez la déclaration de champ du fichier de concepteur dans le fichier code-behind.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.RegularExpressionValidator val_motDePasse;
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator val_motDePasseVide;
         
         /// <summary>
         /// Contrôle lbl_courriel1.
@@ -202,6 +247,15 @@ namespace TP2 {
         protected global::System.Web.UI.WebControls.TextBox txt_motDePasseRepeter;
         
         /// <summary>
+        /// Contrôle val_motDePasseRepeterVide.
+        /// </summary>
+        /// <remarks>
+        /// Champ généré automatiquement.
+        /// Pour modifier, déplacez la déclaration de champ du fichier de concepteur dans le fichier code-behind.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator val_motDePasseRepeterVide;
+        
+        /// <summary>
         /// Contrôle val_motDePasseRepeter.
         /// </summary>
         /// <remarks>
@@ -211,12 +265,12 @@ namespace TP2 {
         protected global::System.Web.UI.WebControls.CompareValidator val_motDePasseRepeter;
         
         /// <summary>
-        /// Contrôle Button1.
+        /// Contrôle btn_confirmer.
         /// </summary>
         /// <remarks>
         /// Champ généré automatiquement.
         /// Pour modifier, déplacez la déclaration de champ du fichier de concepteur dans le fichier code-behind.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button Button1;
+        protected global::System.Web.UI.WebControls.Button btn_confirmer;
     }
 }

@@ -2,15 +2,22 @@
     margin-left: 18px;
     font-family: Arial, helvetica, Verdana, Sans-Serif;
 }
+
 .accueil_label {
 display: inline-block;
-width: 120px;
+width
+    : 120px;
 }
 .labelsAjouteStagiaires {
     display: inline-block;
     width: 130px;
 }
+
 .labels-Stagiaire {
     display: inline-block;
     width: 85px;
+}
+.vertSucces {
+color : green;
+font-weight:bold;
 }

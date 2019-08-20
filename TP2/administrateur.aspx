@@ -5,13 +5,15 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
-    <title></title>
+    <style>@import url(format.css);</style>
+    <title><asp:Literal ID="lit_titrePage" runat="server"></asp:Literal></title>
 </head>
 <body>
     <form id="form1" runat="server">
     <h1>
         <asp:Literal ID="lit_titre" runat="server"></asp:Literal>
     </h1>
+        <span style="COLOR: green;font-weight:bold;"><asp:Literal  ID="lit_messageAjout" runat="server"></asp:Literal></span>
     <h2>
         Stagiaires :
     </h2>
@@ -45,7 +47,8 @@
     <h2>
         Superviseurs :
     </h2>
-
+        <asp:Button ID="btn_ajoutSuperviseur" runat="server" Text="Ajouter" OnClick="btn_ajoutSuperviseur_Click" />
+        <br />
         <asp:GridView ID="grid_superviseurs" runat="server" AllowPaging="True" AllowSorting="True" AutoGenerateColumns="False" DataKeyNames="Id" DataSourceID="ds_superviseurs" BackColor="White" BorderColor="#DEDFDE" BorderStyle="None" BorderWidth="1px" CellPadding="4" ForeColor="Black" GridLines="Vertical">
             <AlternatingRowStyle BackColor="White" />
             <Columns>

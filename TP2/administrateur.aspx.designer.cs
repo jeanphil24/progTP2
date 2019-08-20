@@ -13,6 +13,15 @@ namespace TP2 {
     public partial class administrateur {
         
         /// <summary>
+        /// Contrôle lit_titrePage.
+        /// </summary>
+        /// <remarks>
+        /// Champ généré automatiquement.
+        /// Pour modifier, déplacez la déclaration de champ du fichier de concepteur dans le fichier code-behind.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Literal lit_titrePage;
+        
+        /// <summary>
         /// Contrôle form1.
         /// </summary>
         /// <remarks>
@@ -29,6 +38,15 @@ namespace TP2 {
         /// Pour modifier, déplacez la déclaration de champ du fichier de concepteur dans le fichier code-behind.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Literal lit_titre;
+        
+        /// <summary>
+        /// Contrôle lit_messageAjout.
+        /// </summary>
+        /// <remarks>
+        /// Champ généré automatiquement.
+        /// Pour modifier, déplacez la déclaration de champ du fichier de concepteur dans le fichier code-behind.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Literal lit_messageAjout;
         
         /// <summary>
         /// Contrôle btn_ajouterStagiaire.
@@ -56,6 +74,15 @@ namespace TP2 {
         /// Pour modifier, déplacez la déclaration de champ du fichier de concepteur dans le fichier code-behind.
         /// </remarks>
         protected global::System.Web.UI.WebControls.LinqDataSource ds_stagiaires;
+        
+        /// <summary>
+        /// Contrôle btn_ajoutSuperviseur.
+        /// </summary>
+        /// <remarks>
+        /// Champ généré automatiquement.
+        /// Pour modifier, déplacez la déclaration de champ du fichier de concepteur dans le fichier code-behind.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button btn_ajoutSuperviseur;
         
         /// <summary>
         /// Contrôle grid_superviseurs.
