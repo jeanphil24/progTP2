@@ -49,6 +49,15 @@ namespace TP2 {
         protected global::System.Web.UI.WebControls.Literal litMatricule;
         
         /// <summary>
+        /// Contrôle litutilisateur.
+        /// </summary>
+        /// <remarks>
+        /// Champ généré automatiquement.
+        /// Pour modifier, déplacez la déclaration de champ du fichier de concepteur dans le fichier code-behind.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Literal litutilisateur;
+        
+        /// <summary>
         /// Contrôle lbl_nom.
         /// </summary>
         /// <remarks>
@@ -101,15 +110,6 @@ namespace TP2 {
         /// Pour modifier, déplacez la déclaration de champ du fichier de concepteur dans le fichier code-behind.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Literal litCourriel;
-        
-        /// <summary>
-        /// Contrôle Button1.
-        /// </summary>
-        /// <remarks>
-        /// Champ généré automatiquement.
-        /// Pour modifier, déplacez la déclaration de champ du fichier de concepteur dans le fichier code-behind.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Button Button1;
         
         /// <summary>
         /// Contrôle GridView1.

@@ -22,6 +22,9 @@
         <asp:Label ID="lbl_matricule" runat="server" Text="Matricule : " CssClass="labels-Stagiaire"></asp:Label> <asp:Literal ID="litMatricule" runat="server"></asp:Literal>
         <br />
         <br />
+        Nom d&#39;utilisateur: <asp:Literal ID="litutilisateur" runat="server"></asp:Literal>
+        <br />
+        <br />
         
         <asp:Label ID="lbl_nom" runat="server" Text="Nom : " CssClass="labels-Stagiaire"></asp:Label> <asp:Literal ID="litNom2" runat="server"></asp:Literal>
         <br />
@@ -32,26 +35,24 @@
         <asp:Label ID="lbl_courriel" runat="server" Text="Courriel : " CssClass="labels-Stagiaire"></asp:Label> <asp:Literal ID="litCourriel" runat="server"></asp:Literal>
         <br />
         <br />
-        <asp:Button ID="Button1" runat="server" Text="Modifier" />
     
     <h2>
         Stages :
     </h2>
     <p>
         &nbsp;</p>
-    <asp:GridView ID="GridView1" runat="server" DataSourceID="LinqDataSourceStages" AllowPaging="True" AllowSorting="True" AutoGenerateColumns="False" CssClass="auto-style2" DataKeyNames="Id" Width="1025px">
+    <asp:GridView ID="GridView1" runat="server" DataSourceID="LinqDataSourceStages" AllowPaging="True" AllowSorting="True" AutoGenerateColumns="False" CssClass="auto-style2" Width="1025px">
         <Columns>
-            <asp:CommandField ShowDeleteButton="True" ShowEditButton="True" />
-            <asp:BoundField DataField="Id" HeaderText="Id" InsertVisible="False" ReadOnly="True" SortExpression="Id" />
-            <asp:BoundField DataField="Titre" HeaderText="Titre" SortExpression="Titre" />
-            <asp:BoundField DataField="Début" HeaderText="Début" SortExpression="Début" />
-            <asp:BoundField DataField="Fin" HeaderText="Fin" SortExpression="Fin" />
-            <asp:BoundField DataField="Commentaire" HeaderText="Commentaire" SortExpression="Commentaire" />
-            <asp:BoundField DataField="SupersiveurId" HeaderText="SupersiveurId" SortExpression="SupersiveurId" />
-            <asp:BoundField DataField="StagiaireId" HeaderText="StagiaireId" SortExpression="StagiaireId" />
+            <asp:BoundField DataField="Titre" HeaderText="Titre" SortExpression="Titre" ReadOnly="True" />
+            <asp:BoundField DataField="Début" HeaderText="Début" SortExpression="Début" ReadOnly="True" />
+            <asp:BoundField DataField="Fin" HeaderText="Fin" SortExpression="Fin" ReadOnly="True" />
+            <asp:BoundField DataField="Commentaire" HeaderText="Commentaire" SortExpression="Commentaire" ReadOnly="True" />
         </Columns>
     </asp:GridView>
-        <asp:LinqDataSource ID="LinqDataSourceStages" runat="server" ContextTypeName="TP2.GestionStagesDataContext" EnableDelete="True" EnableInsert="True" EnableUpdate="True" EntityTypeName="" OrderBy="Titre" TableName="Stages">
+        <asp:LinqDataSource ID="LinqDataSourceStages" runat="server" ContextTypeName="TP2.GestionStagesDataContext" EntityTypeName="" OrderBy="Titre" TableName="Stages" Select="new (Titre, Début, Fin, Commentaire, Superviseur)" Where="StagiaireId == @StagiaireId">
+            <WhereParameters>
+                <asp:SessionParameter Name="StagiaireId" SessionField="ID" Type="Int32" />
+            </WhereParameters>
         </asp:LinqDataSource>
     
     </form>
