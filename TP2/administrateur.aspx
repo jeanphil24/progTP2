@@ -22,7 +22,7 @@
         <asp:GridView ID="grid_stagiaires" runat="server" AllowPaging="True" AllowSorting="True" AutoGenerateColumns="False" BackColor="White" BorderColor="#DEDFDE" BorderStyle="None" BorderWidth="1px" CellPadding="4" DataKeyNames="Id" DataSourceID="ds_stagiaires" ForeColor="Black" GridLines="Vertical">
             <AlternatingRowStyle BackColor="White" />
             <Columns>
-                <asp:CommandField ShowDeleteButton="True" ShowEditButton="True" />
+                <asp:CommandField ShowEditButton="True" />
                 <asp:BoundField DataField="Id" HeaderText="Id" InsertVisible="False" ReadOnly="True" SortExpression="Id" />
                 <asp:BoundField DataField="Nom" HeaderText="Nom" SortExpression="Nom" />
                 <asp:BoundField DataField="Téléphone" HeaderText="Téléphone" SortExpression="Téléphone" />
@@ -52,7 +52,7 @@
         <asp:GridView ID="grid_superviseurs" runat="server" AllowPaging="True" AllowSorting="True" AutoGenerateColumns="False" DataKeyNames="Id" DataSourceID="ds_superviseurs" BackColor="White" BorderColor="#DEDFDE" BorderStyle="None" BorderWidth="1px" CellPadding="4" ForeColor="Black" GridLines="Vertical">
             <AlternatingRowStyle BackColor="White" />
             <Columns>
-                <asp:CommandField ShowDeleteButton="True" ShowEditButton="True" />
+                <asp:CommandField ShowEditButton="True" />
                 <asp:BoundField DataField="Id" HeaderText="Id" InsertVisible="False" ReadOnly="True" SortExpression="Id" />
                 <asp:BoundField DataField="Nom" HeaderText="Nom" SortExpression="Nom" />
                 <asp:BoundField DataField="Téléphone" HeaderText="Téléphone" SortExpression="Téléphone" />

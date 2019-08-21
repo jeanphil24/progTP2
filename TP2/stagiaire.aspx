@@ -22,7 +22,7 @@
         <asp:Label ID="lbl_matricule" runat="server" Text="Matricule : " CssClass="labels-Stagiaire"></asp:Label> <asp:Literal ID="litMatricule" runat="server"></asp:Literal>
         <br />
         <br />
-        Nom d&#39;utilisateur: <asp:Literal ID="litutilisateur" runat="server"></asp:Literal>
+        <asp:Label ID="Lbl_usager" runat="server" Text="Usager:" CssClass="labels-Stagiaire"></asp:Label> <asp:Literal ID="litutilisateur" runat="server"></asp:Literal>
         <br />
         <br />
         
