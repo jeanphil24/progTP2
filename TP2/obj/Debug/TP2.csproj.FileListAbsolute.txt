@@ -7,3 +7,10 @@ E:\S3_Prog_gestion\TP_2\progTP2\TP2\obj\Debug\TP2.csprojAssemblyReference.cache
 E:\S3_Prog_gestion\TP_2\progTP2\TP2\obj\Debug\TP2.csproj.CoreCompileInputs.cache
 E:\S3_Prog_gestion\TP_2\progTP2\TP2\obj\Debug\TP2.dll
 E:\S3_Prog_gestion\TP_2\progTP2\TP2\obj\Debug\TP2.pdb
+C:\Users\admin\source\repos\TP2-Prog\progTP2\TP2\bin\TP2.dll.config
+C:\Users\admin\source\repos\TP2-Prog\progTP2\TP2\bin\TP2.dll
+C:\Users\admin\source\repos\TP2-Prog\progTP2\TP2\bin\TP2.pdb
+C:\Users\admin\source\repos\TP2-Prog\progTP2\TP2\obj\Debug\TP2.csprojAssemblyReference.cache
+C:\Users\admin\source\repos\TP2-Prog\progTP2\TP2\obj\Debug\TP2.csproj.CoreCompileInputs.cache
+C:\Users\admin\source\repos\TP2-Prog\progTP2\TP2\obj\Debug\TP2.dll
+C:\Users\admin\source\repos\TP2-Prog\progTP2\TP2\obj\Debug\TP2.pdb

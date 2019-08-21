@@ -72,7 +72,8 @@
       <DependentUpon>GestionStages.mdf</DependentUpon>
     </Content>
     <Content Include="Default.aspx" />
-    <Content Include="modifierStage.aspx" />
+    <Content Include="format.css" />
+    <Content Include="AjouterStage.aspx" />
     <Content Include="modifierStagiaire.aspx" />
     <Content Include="modifierSuperviseur.aspx" />
     <Content Include="stagiaire.aspx" />
@@ -103,12 +104,12 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>GestionStages.dbml</DependentUpon>
     </Compile>
-    <Compile Include="modifierStage.aspx.cs">
-      <DependentUpon>modifierStage.aspx</DependentUpon>
+    <Compile Include="AjouterStage.aspx.cs">
+      <DependentUpon>AjouterStage.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="modifierStage.aspx.designer.cs">
-      <DependentUpon>modifierStage.aspx</DependentUpon>
+    <Compile Include="AjouterStage.aspx.designer.cs">
+      <DependentUpon>AjouterStage.aspx</DependentUpon>
     </Compile>
     <Compile Include="modifierStagiaire.aspx.cs">
       <DependentUpon>modifierStagiaire.aspx</DependentUpon>
