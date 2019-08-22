@@ -24,7 +24,7 @@ namespace TP2
                 litNom1.Text = local.m_nom;
                 litNom2.Text = stagiaire.Nom;
                 litTelephone.Text = stagiaire.Téléphone;
-                litutilisateur.Text = stagiaire.NomUtilisateur;
+                litUtilisateur.Text = stagiaire.NomUtilisateur;
                 litMatricule.Text = stagiaire.Id.ToString();
                 litCourriel.Text = stagiaire.Courriel;
                 this.Session["ID"] = stagiaire.Id.ToString();

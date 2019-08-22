@@ -130,13 +130,13 @@ namespace TP2 {
         protected global::System.Web.UI.WebControls.TextBox txtCommentaire;
         
         /// <summary>
-        /// Contrôle lblNom.
+        /// Contrôle lblSuperviseur.
         /// </summary>
         /// <remarks>
         /// Champ généré automatiquement.
         /// Pour modifier, déplacez la déclaration de champ du fichier de concepteur dans le fichier code-behind.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblNom;
+        protected global::System.Web.UI.WebControls.Label lblSuperviseur;
         
         /// <summary>
         /// Contrôle DrpSuperviseur.
@@ -146,6 +146,15 @@ namespace TP2 {
         /// Pour modifier, déplacez la déclaration de champ du fichier de concepteur dans le fichier code-behind.
         /// </remarks>
         protected global::System.Web.UI.WebControls.DropDownList DrpSuperviseur;
+        
+        /// <summary>
+        /// Contrôle lblStagiaire.
+        /// </summary>
+        /// <remarks>
+        /// Champ généré automatiquement.
+        /// Pour modifier, déplacez la déclaration de champ du fichier de concepteur dans le fichier code-behind.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lblStagiaire;
         
         /// <summary>
         /// Contrôle DrpStagiaire.
@@ -164,5 +173,23 @@ namespace TP2 {
         /// Pour modifier, déplacez la déclaration de champ du fichier de concepteur dans le fichier code-behind.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Button btnConfirmer;
+        
+        /// <summary>
+        /// Contrôle dsSuperviseurs.
+        /// </summary>
+        /// <remarks>
+        /// Champ généré automatiquement.
+        /// Pour modifier, déplacez la déclaration de champ du fichier de concepteur dans le fichier code-behind.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.LinqDataSource dsSuperviseurs;
+        
+        /// <summary>
+        /// Contrôle dsStagiaires.
+        /// </summary>
+        /// <remarks>
+        /// Champ généré automatiquement.
+        /// Pour modifier, déplacez la déclaration de champ du fichier de concepteur dans le fichier code-behind.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.LinqDataSource dsStagiaires;
     }
 }

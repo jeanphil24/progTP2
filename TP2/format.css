@@ -11,11 +11,18 @@ width
 .labelsAjouteStagiaires {
     display: inline-block;
     width: 130px;
+    height: 18px;
 }
+
+.labelsAjouteStages {
+    display: inline-block;
+    width: 130px;
+}
+
 
 .labels-Stagiaire {
     display: inline-block;
-    width: 85px;
+    width: 130px;
 }
 .vertSucces {
 color : green;

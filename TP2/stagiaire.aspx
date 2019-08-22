@@ -22,7 +22,7 @@
         <asp:Label ID="lbl_matricule" runat="server" Text="Matricule : " CssClass="labels-Stagiaire"></asp:Label> <asp:Literal ID="litMatricule" runat="server"></asp:Literal>
         <br />
         <br />
-        <asp:Label ID="Lbl_usager" runat="server" Text="Usager:" CssClass="labels-Stagiaire"></asp:Label> <asp:Literal ID="litutilisateur" runat="server"></asp:Literal>
+        <asp:Label ID="lbl_usager" runat="server" Text="Nom d'utilisateur : " CssClass="labels-Stagiaire"></asp:Label> <asp:Literal ID="litUtilisateur" runat="server"></asp:Literal>
         <br />
         <br />
         
@@ -39,15 +39,23 @@
     <h2>
         Stages :
     </h2>
-    <p>
-        &nbsp;</p>
-    <asp:GridView ID="GridView1" runat="server" DataSourceID="LinqDataSourceStages" AllowPaging="True" AllowSorting="True" AutoGenerateColumns="False" CssClass="auto-style2" Width="1025px">
+    <asp:GridView ID="GridView1" runat="server" DataSourceID="LinqDataSourceStages" AllowPaging="True" AllowSorting="True" AutoGenerateColumns="False" CssClass="auto-style2" Width="1025px" BackColor="White" BorderColor="#DEDFDE" BorderStyle="None" BorderWidth="1px" CellPadding="4" ForeColor="Black" GridLines="Vertical">
+        <AlternatingRowStyle BackColor="White" />
         <Columns>
             <asp:BoundField DataField="Titre" HeaderText="Titre" SortExpression="Titre" ReadOnly="True" />
             <asp:BoundField DataField="Début" HeaderText="Début" SortExpression="Début" ReadOnly="True" />
             <asp:BoundField DataField="Fin" HeaderText="Fin" SortExpression="Fin" ReadOnly="True" />
             <asp:BoundField DataField="Commentaire" HeaderText="Commentaire" SortExpression="Commentaire" ReadOnly="True" />
         </Columns>
+        <FooterStyle BackColor="#CCCC99" />
+        <HeaderStyle BackColor="#6B696B" Font-Bold="True" ForeColor="White" />
+        <PagerStyle BackColor="#F7F7DE" ForeColor="Black" HorizontalAlign="Right" />
+        <RowStyle BackColor="#F7F7DE" />
+        <SelectedRowStyle BackColor="#CE5D5A" Font-Bold="True" ForeColor="White" />
+        <SortedAscendingCellStyle BackColor="#FBFBF2" />
+        <SortedAscendingHeaderStyle BackColor="#848384" />
+        <SortedDescendingCellStyle BackColor="#EAEAD3" />
+        <SortedDescendingHeaderStyle BackColor="#575357" />
     </asp:GridView>
         <asp:LinqDataSource ID="LinqDataSourceStages" runat="server" ContextTypeName="TP2.GestionStagesDataContext" EntityTypeName="" OrderBy="Titre" TableName="Stages" Select="new (Titre, Début, Fin, Commentaire, Superviseur)" Where="StagiaireId == @StagiaireId">
             <WhereParameters>

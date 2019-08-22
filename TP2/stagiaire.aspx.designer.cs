@@ -49,22 +49,22 @@ namespace TP2 {
         protected global::System.Web.UI.WebControls.Literal litMatricule;
         
         /// <summary>
-        /// Contrôle Lbl_usager.
+        /// Contrôle lbl_usager.
         /// </summary>
         /// <remarks>
         /// Champ généré automatiquement.
         /// Pour modifier, déplacez la déclaration de champ du fichier de concepteur dans le fichier code-behind.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label Lbl_usager;
+        protected global::System.Web.UI.WebControls.Label lbl_usager;
         
         /// <summary>
-        /// Contrôle litutilisateur.
+        /// Contrôle litUtilisateur.
         /// </summary>
         /// <remarks>
         /// Champ généré automatiquement.
         /// Pour modifier, déplacez la déclaration de champ du fichier de concepteur dans le fichier code-behind.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Literal litutilisateur;
+        protected global::System.Web.UI.WebControls.Literal litUtilisateur;
         
         /// <summary>
         /// Contrôle lbl_nom.

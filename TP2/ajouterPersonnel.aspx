@@ -15,14 +15,8 @@
     <form id="form_ajouterStagiaire" runat="server">
         
         <asp:ValidationSummary ID="ValidationSummary1" runat="server" Height="113px" />
-        <br />
-        
-        <asp:Label ID="lbl_matricule" runat="server" Text="Matricule : " CssClass="labelsAjouteStagiaires"></asp:Label>
-        
-        <asp:TextBox ID="txt_matricule" runat="server"></asp:TextBox>
-        <asp:RequiredFieldValidator ID="val_matricule" runat="server" ControlToValidate="txt_matricule" ErrorMessage="Le champ &quot;matricule&quot; ne doit pas être vide">*</asp:RequiredFieldValidator>
-        <br />
-        <br />
+
+      
         <asp:Label ID="lbl_nom" runat="server" Text="Nom : " CssClass="labelsAjouteStagiaires"></asp:Label>
         
         <asp:TextBox ID="txt_nom" runat="server"></asp:TextBox>
@@ -38,7 +32,7 @@
         <asp:Label ID="lbl_telephone" runat="server" Text="Téléphone : " CssClass="labelsAjouteStagiaires"></asp:Label>
         <asp:TextBox ID="txt_telephone" runat="server"></asp:TextBox>
         <asp:RequiredFieldValidator ID="val_telephoneVide" runat="server" ControlToValidate="txt_telephone" ErrorMessage="Le champ &quot;téléphone&quot; ne doit pas être vide">*</asp:RequiredFieldValidator>
-        <asp:RegularExpressionValidator ID="val_telephoneFormat" runat="server" ControlToValidate="txt_telephone" ErrorMessage="Le format du numéro de téléphone n'est pas valide" ValidationExpression="^\d{3}-\d{3}-\d{4}$">*</asp:RegularExpressionValidator>
+        <asp:RegularExpressionValidator ID="val_telephoneFormat" runat="server" ControlToValidate="txt_telephone" ErrorMessage="Le format du numéro de téléphone doit être 111-111-1111" ValidationExpression="^\d{3}-\d{3}-\d{4}$">*</asp:RegularExpressionValidator>
         <br />
         <br />
         <asp:Label ID="lbl_courriel" runat="server" Text="Courriel : " CssClass="labelsAjouteStagiaires"></asp:Label>
