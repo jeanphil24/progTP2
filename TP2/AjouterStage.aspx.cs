@@ -17,31 +17,51 @@ namespace TP2
             {
                 this.Response.Redirect("~/Default.aspx");
             }
+
+            if (this.Session["AJOUTER"] == null)
+            { 
+                this.Response.Redirect("~/superviseur.aspx");
+            }
+
+            else
+            {
+                bool Ajout = (bool)this.Session["AJOUTER"];
+            }
+       
+
         }
 
         protected void btnConfirmer_Click(object sender, EventArgs e)
         {
             BDGestionStages bdGestionStages = new BDGestionStages();
-            Stage stage = new Stage();
-            DateTime dateDebut = new DateTime();
-            DateTime dateFin = new DateTime();
+            bool Ajout = (bool)this.Session["AJOUTER"];
 
-            stage.Titre = this.txtTitre.Text;
+            if (Ajout == true)
+            {
+                Stage temporaire = new Stage();
+                DateTime dateDebut = new DateTime();
+                DateTime dateFin = new DateTime();
 
-            dateDebut = DateTime.ParseExact(this.txtDebut.Text, "yyyy-MM-dd", null);
-            stage.Début = dateDebut;
+                temporaire.Titre = this.txtTitre.Text;
 
-            dateFin = DateTime.ParseExact(this.txtFin.Text, "yyyy-MM-dd", null);
-            stage.Fin = dateFin;
+                dateDebut = DateTime.ParseExact(this.txtDebut.Text, "yyyy-MM-dd", null);
+                temporaire.Début = dateDebut;
 
-            stage.Commentaire = this.txtCommentaire.Text;
+                dateFin = DateTime.ParseExact(this.txtFin.Text, "yyyy-MM-dd", null);
+                temporaire.Fin = dateFin;
 
-            //stage.Superviseur = this.DrpSuperviseur.Text;
-            //stage.Stagiaire = this.DrpStagiaire.Text;
+                temporaire.Commentaire = this.txtCommentaire.Text;
 
-            //bdGestionStages.Ajouter(Stage p_Stage, int p_SuperviseurId, int p_StagiaireId)
+                temporaire.SupersiveurId = Convert.ToInt32(this.DrpSuperviseur.SelectedItem.Value);
+                temporaire.StagiaireId = Convert.ToInt32(this.DrpStagiaire.SelectedItem.Value);
 
-            this.Response.Redirect("~/superviseur.aspx");
+                bdGestionStages.Ajouter(temporaire, temporaire.SupersiveurId, temporaire.StagiaireId);
+                bdGestionStages.Sauvegarder();
+
+                this.Session["AJOUTER"] = null;
+
+                this.Response.Redirect("~/superviseur.aspx");
+            }
 
         }
 

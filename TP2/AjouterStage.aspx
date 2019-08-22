@@ -6,11 +6,7 @@
 <head runat="server">
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
     <style>@import url(format.css);
-        .auto-style1 {
-            display: inline-block;
-            width: 431px;
-        }
-    </style>
+        </style>
     <title></title>
 
 </head>
@@ -20,7 +16,7 @@
     </h1>
     <form id="form1" runat="server">
         
-        <asp:ValidationSummary ID="ValidationSummary1" runat="server" />
+        <asp:ValidationSummary ID="ValidationSummary1" runat="server" Height="103px" />
         
         <asp:Label ID="lblTitre" runat="server" Text="Titre : "></asp:Label>
         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
@@ -44,14 +40,19 @@
         <asp:Label ID="lblNom" runat="server" Text="Superviseur : "></asp:Label>
         
     &nbsp;&nbsp;&nbsp;
-        <asp:DropDownList ID="DrpSuperviseur" runat="server">
+        <asp:DropDownList ID="DrpSuperviseur" runat="server" DataSourceID="dsSuperviseurs" DataTextField="Nom" DataValueField="Id">
         </asp:DropDownList>
         <br />
         Stagiaire :
-        <asp:DropDownList ID="DrpStagiaire" runat="server">
+        <asp:DropDownList ID="DrpStagiaire" runat="server" DataSourceID="dsStagiaires" DataTextField="Nom" DataValueField="Id">
         </asp:DropDownList>
         <br />
         <asp:Button ID="btnConfirmer" runat="server" Text="Confirmer" OnClick="btnConfirmer_Click" />
+        
+        <asp:LinqDataSource ID="dsSuperviseurs" runat="server" ContextTypeName="TP2.GestionStagesDataContext" EntityTypeName="" OrderBy="Nom" TableName="Superviseurs">
+        </asp:LinqDataSource>
+        <asp:LinqDataSource ID="dsStagiaires" runat="server" ContextTypeName="TP2.GestionStagesDataContext" EntityTypeName="" OrderBy="Nom" TableName="Stagiaires">
+        </asp:LinqDataSource>
         
     </form>
 </body>

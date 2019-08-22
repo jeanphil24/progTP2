@@ -23,7 +23,7 @@ namespace TP2
 
         protected void btnAjouter_Click(object sender, EventArgs e)
         {
-          
+            this.Session["AJOUTER"] = true;
             this.Response.Redirect("~/AjouterStage.aspx");
         }
     }
